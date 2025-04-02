@@ -1,27 +1,154 @@
-# JEST Unit Tests
+# 📊 Projeto: Análise de Dados com JavaScript
 
-## GitHub Actions
+Este projeto implementa uma classe `AnaliseDeDados` para realizar diversas operações estatísticas sobre um conjunto de dados numéricos. Ele inclui cálculos como média, mediana, moda, variância, desvio padrão, entre outros.
 
-[![Build and Tests](https://github.com/ugioni/unit-tests-jest/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/unit-tests-jest/actions/workflows/node.js.yml)
+---
 
-## SonarCloud
+## 🚀 Tecnologias Utilizadas
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_unit-tests-jest&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_unit-tests-jest)
+- **Node.js** (versão >= 20.x)
+- **Jest** (para testes unitários)
+- **GitHub Actions** (para CI/CD)
+- **SonarCloud** (para análise de qualidade do código)
 
-## Getting Started
+---
 
-In order to execute this project you must follow the steps below:
+## 📥 Instalação e Configuração
 
-1. Install [Node JS](https://nodejs.org/) (version >= 20.x)
-1. Run `npm install` to install all the project dependencies
-1. Run `npm run test` to execute the entire test suite
-1. Run `npm run coverage` to execute the entire test suite with coverage
+Para executar o projeto localmente, siga os passos abaixo:
 
-All execution artifacts can be found in `./coverage`, if you want to remove these files run `npm run clean`.
+1. **Instale o Node.js** (versão >= 20.x)
+2. **Clone o repositório:**
+   ```sh
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+   ```
+3. **Instale as dependências:**
+   ```sh
+   npm install
+   ```
 
-## Project Structure
-</br>
-<ul>
-    <li>src: source code</li>
-    <li>test: unit test files</li>
-</ul>
+---
+
+## 🛠️ Como Executar os Testes
+
+O projeto possui uma suíte de testes unitários para validar todas as operações da classe `AnaliseDeDados`. Para executar os testes:
+
+```sh
+npm run test
+```
+
+Para visualizar a cobertura dos testes:
+
+```sh
+npm run coverage
+```
+
+Os relatórios de cobertura serão gerados na pasta `./coverage`. Para removê-los:
+
+```sh
+npm run clean
+```
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+📂 projeto
+ ├── 📂 src                # Código-fonte principal
+ │    ├── analiseDeDados.js # Implementação da classe
+ │
+ ├── 📂 test               # Testes unitários
+ │    ├── analiseDeDados.test.js # Testes da classe AnaliseDeDados
+ │
+ ├── package.json          # Configuração do Node.js e dependências
+ ├── README.md             # Documentação do projeto
+```
+
+---
+
+## 📊 Funcionalidades da Classe `AnaliseDeDados`
+
+A classe `AnaliseDeDados` implementa as seguintes operações estatísticas:
+
+- **Manipulação de Dados:**
+  - Adicionar novos valores ao conjunto de dados.
+  - Remover outliers com base no intervalo interquartil.
+  - Limpar o conjunto de dados.
+  
+- **Medições Estatísticas:**
+  - Média, Mediana e Moda.
+  - Variância e Desvio Padrão.
+  - Amplitude, Soma e Produto.
+  - Coeficiente de Variação.
+  
+- **Análises Avançadas:**
+  - Normalização de dados.
+  - Cálculo de Percentis.
+  - Correlação entre dois conjuntos de dados.
+  - Ordenação de dados.
+
+---
+
+## 🔬 Exemplo de Uso
+
+```js
+const AnaliseDeDados = require("./src/analiseDeDados");
+
+const dados = new AnaliseDeDados([1, 2, 3, 4, 5, 5]);
+console.log("Média:", dados.calcularMedia());
+console.log("Mediana:", dados.calcularMediana());
+console.log("Moda:", dados.calcularModa());
+console.log("Variância:", dados.calcularVariancia());
+console.log("Desvio Padrão:", dados.calcularDesvioPadrao());
+```
+
+Saída esperada:
+```sh
+Média: 3.33
+Mediana: 3.5
+Moda: [5]
+Variância: 2.67
+Desvio Padrão: 1.63
+```
+
+---
+
+## ✅ Testes Unitários
+
+O projeto conta com testes unitários para cada funcionalidade da classe `AnaliseDeDados`. Exemplo de um teste:
+
+```js
+test("deve calcular a média corretamente", () => {
+  expect(analise.calcularMedia()).toBeCloseTo(3.33, 2);
+});
+```
+
+---
+
+## 📌 Contribuindo
+
+Se quiser contribuir com melhorias, siga os passos:
+
+1. **Crie um fork** do repositório.
+2. **Crie uma nova branch:** `git checkout -b minha-feature`
+3. **Faça as alterações e commit:** `git commit -m 'Adiciona nova funcionalidade'`
+4. **Suba as alterações:** `git push origin minha-feature`
+5. **Abra um Pull Request** no GitHub.
+
+---
+
+## 🔗 Links Úteis
+
+- [Documentação do Node.js](https://nodejs.org/)
+- [Jest - Testes em JavaScript](https://jestjs.io/)
+- [GitHub Actions](https://docs.github.com/en/actions)
+- [SonarCloud](https://sonarcloud.io/)
+
+---
+
+## 📜 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
