@@ -1,0 +1,16 @@
+{
+  
+    "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+    "mutate": ["src/**/*.js"],
+    "testRunner": "jest",
+    "jest": {
+      "configFile": "jest.config.js",
+      "projectType": "custom",
+      "enableFindRelatedTests": false
+    },
+    "reporters": ["progress", "clear-text", "html"],
+    "concurrency": 6,
+    "coverageAnalysis": "perTest",
+    "ignorePatterns": ["mutation.html/**", ".stryker-tmp/**"]
+  }
+  

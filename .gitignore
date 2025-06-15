@@ -11,3 +11,5 @@ jspm_packages/
 .npm
 .env
 .env.test
+# stryker temp files
+.stryker-tmp
